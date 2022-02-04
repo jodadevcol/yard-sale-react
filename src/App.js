@@ -1,17 +1,18 @@
-import logo from "./logo.svg";
 import "./App.css";
+import Login from "./containers/Login/Login"
+import RecoveryPass from "./containers/Recovery/RecoveryPass";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Hello World</h1>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" component={Home} />
+        <Route path="/login" component={Login} />
+        <Route path="/recovery-password" component={RecoveryPass} />
+        <Route component={NotFound} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
