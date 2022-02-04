@@ -1,4 +1,5 @@
 import "./Login.css";
+import logo from "../../assets/img/logo-yard-sale.svg"
 
 function Login() {
   return (
@@ -7,7 +8,7 @@ function Login() {
         <div className="login-form-container">
           <img
             className="login-logo"
-            src="./assets/images/logos/logo_yard_sale.svg"
+            src={logo}
             alt="YARD Sale Logo"
           />
 
