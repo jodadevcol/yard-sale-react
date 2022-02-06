@@ -1,0 +1,59 @@
+/* Card */
+.card-product {
+  width: var(--card-size-md);
+}
+.card-product .preview-product {
+  width: var(--card-size-md);
+  height: var(--card-size-md);
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+  filter: drop-shadow(0px 0px 15px rgba(199, 199, 199, 0.5));
+}
+.card-product .card-product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.8em;
+}
+.product-info .product-precie {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: var(--font-size-md);
+  line-height: 1.6;
+  color: var(--second-black);
+}
+.product-info .product-name {
+  font-weight: 300;
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  color: var(--gray);
+}
+.card-product-info .product-figure {
+  width: 40px;
+  height: 40px;
+}
+.product-figure .picture-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Medias sm - Cards products */
+@media (max-width: 640px) {
+  .cards-products-container {
+    grid-template-columns: repeat(auto-fill, var(--card-size-sm));
+    gap: 0.625em;
+  }
+  .card-product {
+    width: var(--card-size-ss);
+  }
+  .card-product .preview-product {
+    width: var(--card-size-sm);
+    height: var(--card-size-sm);
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+  }
+}
