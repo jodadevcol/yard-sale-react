@@ -16,6 +16,8 @@
   --card-size-sm: 150px;
   --card-size-md: 220px;
   --card-size-lg: 260px;
+  /* Header */
+  --height-header: 10vh;
 }
 *,
 ::after,

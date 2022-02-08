@@ -47,7 +47,7 @@
     gap: 0.625em;
   }
   .card-product {
-    width: var(--card-size-ss);
+    width: var(--card-size-sm);
   }
   .card-product .preview-product {
     width: var(--card-size-sm);

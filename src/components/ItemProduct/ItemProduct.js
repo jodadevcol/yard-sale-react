@@ -1,4 +1,7 @@
+import React from "react"
 import "./ItemProduct.css"
+
+import IconAddCart from '@icons/bt_add_to_cart.svg'
 
 function ItemProduct() {
   const sourceImg = `https://images.pexels.com/photos/6782479/pexels-photo-6782479.jpeg?cs=srgb&dl=pexels-max-vakhtbovych-6782479.jpg&fm=jpg`
@@ -18,7 +21,7 @@ function ItemProduct() {
         <figure className="product-figure">
           <img
             className="picture-icon"
-            src="./assets/images/icons/bt_add_to_cart.svg"
+            src={IconAddCart}
             alt="Add card product"
           />
         </figure>

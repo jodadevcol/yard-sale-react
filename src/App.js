@@ -1,5 +1,6 @@
-import "./App.css";
+import React from 'react';
 import { Routes, Route } from "react-router-dom"
+import "./App.css";
 import Layout from "./containers/Layout/Layout";
 import Home from "./pages/Home";
 import Login from "./containers/Login/Login"
@@ -14,22 +15,20 @@ import RecoveryPass from "./containers/Recovery/RecoveryPass"
 
 function App() {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="login" element={<Login />} />
-          <Route path="recovery-password" element={<RecoveryPass />} />
-          <Route path="account" element={<MyAccount />} />
-          <Route path="account-created" element={<MyAccountCreated />} />
-          <Route path="my-orders" element={<MyOrders />} />
-          <Route path="order" element={<Order />} />
-          <Route path="orders" element={<Orders />} />
-          <Route path="send-email" element={<SendEmail />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="login" element={<Login />} />
+        <Route path="recovery-password" element={<RecoveryPass />} />
+        <Route path="account" element={<MyAccount />} />
+        <Route path="account-created" element={<MyAccountCreated />} />
+        <Route path="my-orders" element={<MyOrders />} />
+        <Route path="order" element={<Order />} />
+        <Route path="orders" element={<Orders />} />
+        <Route path="send-email" element={<SendEmail />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
   );
 }
 

@@ -1,6 +1,7 @@
+import React from "react"
 import "./RecoveryPass.css"
-import logo from "../../assets/img/logo-yard-sale.svg"
-import email from "../../assets/icons/email.svg"
+import logo from "@img/logo-yard-sale.svg"
+import email from "@icons/email.svg"
 
 function RecoveryPass() {
   return (

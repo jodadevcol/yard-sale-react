@@ -1,3 +1,4 @@
+import React from "react"
 import "./SendEmail.css"
 
 function SendEmail() {

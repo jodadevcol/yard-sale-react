@@ -1,16 +1,17 @@
+import React from "react"
 import "./Login.css";
-import logo from "../../assets/img/logo-yard-sale.svg"
+/* import logo from "@img/logo-yard-sale.svg" */
 
 function Login() {
   return (
     <>
       <div className="login">
         <div className="login-form-container">
-          <img
+          {/* <img
             className="login-logo"
             src={logo}
             alt="YARD Sale Logo"
-          />
+          /> */}
 
           <h1 className="login-title">Create a new password</h1>
           <p className="login-subtitle">

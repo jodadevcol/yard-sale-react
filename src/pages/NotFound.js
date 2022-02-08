@@ -1,3 +1,5 @@
+import React from "react"
+
 function NotFound() {
   return (
     <h1> Pagina no encntrada</h1>
