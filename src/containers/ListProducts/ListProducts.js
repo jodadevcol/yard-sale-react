@@ -5,32 +5,37 @@ import "./ListProducts.css"
 const URL_API = `https://api.escuelajs.co/api/v1/products`
 
 function ListProducts() {
-  const [products, setProucts] = useState()
+  const [products, setProucts] = useState([])
 
-  const responsAPI = dataAPI => {
-    const { data = [] } = dataAPI
-    return Array.isArray(data)
-      ? console.log(data)
-      : console.log("Vacio")
-  }
+  useEffect(
+    function () {
+      fetch(URL_API)
+        .then(response => response.json())
+        .then(data => {
+          const { ArrayProducts = [] } = data
 
-  const fetchAPI = () => {
-    fetch(URL_API)
-      .then(response => response.json())
-      .then(responsAPI)
-  }
-
-  useEffect(() => {
-    fetchAPI()
-  })
+          if (Array.isArray(ArrayProducts)) {
+            setProucts(data)
+          }
+          return []
+        })
+    },
+    []
+  )
 
   return (
     <section className="products-container">
       <div className="cards-products-container">
         {
-          /* products.map(product => (
-            <ItemProduct />
-          )) */
+          /* console.log(typeof products) */
+          products.map(({ id, title, price, images }) => (
+            <ItemProduct
+              key={id}
+              title={title}
+              price={price}
+              images={images[0]}
+            />
+          ))
         }
       </div>
     </section>
