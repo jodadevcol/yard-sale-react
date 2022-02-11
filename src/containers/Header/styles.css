@@ -1,0 +1,113 @@
+.hero {
+  position: relative;
+  z-index: 1040;
+}
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: var(--height-header);
+  margin-bottom: 2em;
+  padding: 1em 1.5em;
+  box-shadow: 0px 0px 6px 1px rgb(0 0 0 / 10%);
+}
+.nav-mobile {
+  display: none;
+}
+.logo {
+  width: 145px;
+  margin-right: 2em;
+}
+.navbar-items {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.navbar-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.navbar-list .navbar-item {
+  margin: 0 4px;
+  padding: 5px 12px;
+  font-weight: 500;
+  font-size: var(--font-size-md);
+  line-height: 20px;
+}
+.navbar-list.account-shopping .navbar-item {
+  padding: 0;
+}
+.navbar-list:not(.account-shopping) .navbar-item a {
+  text-decoration: none;
+  color: var(--very-light-pink);
+}
+.navbar-list:not(.account-shopping) .navbar-item:hover,
+.navbar-list:not(.account-shopping) .navbar-item.active {
+  font-weight: 700;
+  border: 1px solid #acd9b2;
+  border-radius: 10px;
+}
+.navbar-list:not(.account-shopping) .navbar-item:hover a,
+.navbar-list:not(.account-shopping) .navbar-item.active a {
+  color: #acd9b2;
+}
+.account-shopping {
+  position: relative;
+  margin: 0 0 0 auto;
+}
+.account-shopping .account-info {
+  font-weight: 300;
+  font-size: var(--font-size-sm);
+}
+.account-shopping .account-info a {
+  line-height: 17px;
+  text-decoration: none;
+  color: var(--black);
+}
+.account-info span,
+.account-info span.arrow-down {
+  background-image: url("../../assets/icons/flechita.svg");
+  transform: rotate(90deg);
+}
+.account-shopping .shopping-cart-nav {
+  margin-left: 1em;
+}
+.account-shopping .shopping-cart-nav .count-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  width: 18px;
+  height: 18px;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  background-color: var(--hospital-green);
+  border-radius: 50%;
+}
+@media (max-width: 990px) {
+  .navbar-container .nav-mobile {
+    display: block;
+  }
+  .navbar-container {
+    justify-content: space-between;
+  }
+  .navbar-container .navbar-items {
+    width: auto;
+  }
+  .navbar-container .logo {
+    margin: 0;
+  }
+  .navbar-list:not(.account-shopping) {
+    display: none;
+  }
+  .navbar-list .navbar-item:not(.shopping-cart-nav) {
+    display: none;
+  }
+  .navbar-list .navbar-item.shopping-cart-nav {
+    margin: 0;
+  }
+}

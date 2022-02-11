@@ -1,0 +1,38 @@
+/* Login */
+.login {
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  place-content: center;
+}
+.login-form-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  justify-items: center;
+  width: 340px;
+}
+.login-logo {
+  display: none;
+  justify-self: center;
+  width: 150px;
+  margin-bottom: 6em;
+}
+.login-title {
+  margin-bottom: 1em;
+  font-size: var(--font-size-lg);
+  line-height: 1.5;
+  text-align: center;
+}
+.login-subtitle {
+  margin-bottom: 2.5em;
+  font-size: var(--font-size-lg);
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--gray);
+  text-align: center;
+}
+@media (max-width: 640px) {
+  .login-logo {
+    display: block;
+  }
+}
