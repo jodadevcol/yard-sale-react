@@ -18,7 +18,6 @@
   justify-content: flex-end;
   align-items: center;
   gap: 1em;
-  padding-right: 16px;
 }
 .shopping-card .shopping-detail p:nth-child(1) {
   margin-right: auto;
@@ -27,6 +26,7 @@
   color: var(--gray);
 }
 .shopping-card .shopping-detail p:nth-child(2) {
+  min-width: 46px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: var(--font-size-md);
