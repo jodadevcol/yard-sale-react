@@ -1,0 +1,55 @@
+.my-order-main {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.my-order-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 1em;
+  width: 90%;
+  min-width: 300px;
+  max-width: 410px;
+  margin: 0 auto;
+}
+.my-order-title {
+  margin-bottom: 40px;
+  font-size: var(--font-size-lg);
+}
+.resume-order {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding: 18px 16px;
+  background-color: var(--text-input-field);
+  border-radius: 10px;
+}
+.resume-order .resume-info,
+.resume-orders .resume-info {
+  display: flex;
+  flex-direction: column;
+}
+.resume-order .resume-info span:nth-child(1),
+.resume-orders .resume-info span:nth-child(1) {
+  font-weight: 700;
+  font-size: var(--font-size-md);
+  line-height: 20px;
+  color: var(--black);
+}
+.resume-order .resume-info span:nth-child(2),
+.resume-orders .resume-info span:nth-child(2) {
+  font-weight: 300;
+  font-size: var(--font-size-md);
+  line-height: 17px;
+  color: var(--gray);
+}
+.resume-order .resume-price,
+.resume-orders .resume-price {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: var(--font-size-md);
+  line-height: 20px;
+  text-align: end;
+  color: var(--second-black);
+}

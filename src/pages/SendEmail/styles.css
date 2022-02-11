@@ -1,0 +1,27 @@
+.login-subtitle {
+  margin-bottom: 1.8em;
+}
+.login-email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 153px;
+  height: 153px;
+  margin-bottom: 1.8em;
+  background-color: var(--snow-gray);
+  border-radius: 50%;
+}
+.login-email img {
+  width: 90px;
+}
+.resend-email {
+  margin-top: 1.5em;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--gray);
+}
+.resend-email a {
+  text-decoration: none;
+  color: var(--hospital-green);
+}
