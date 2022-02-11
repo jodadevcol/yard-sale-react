@@ -4,6 +4,8 @@ import ItemShopping from "@components/ItemShopping"
 import BtnPrimary from "@components/Buttons/Primary"
 /* Contexts */
 import AppContext from "@contexts/AppContext"
+/* Hooks */
+import useFormatMoney from "@hooks/useFormatMoney"
 /* Styles & Sources */
 import "./styles.css"
 import IconArrowLeft from "@icons/arrow-left.svg"
@@ -26,6 +28,8 @@ function ShoppingCart() {
 
     return sumShopping
   }
+
+  const formatMoney = useFormatMoney(totalShopping())
 
   return (
     <div className="shopping-cart-container">
@@ -53,7 +57,7 @@ function ShoppingCart() {
             <span>Total</span>
             <span>{totalArticles()}</span>
           </p>
-          <p className="resume-price">$ {totalShopping()}</p>
+          <p className="resume-price">{formatMoney}</p>
         </div>
 
         <BtnPrimary
