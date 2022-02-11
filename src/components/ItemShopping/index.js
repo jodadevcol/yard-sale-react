@@ -1,21 +1,29 @@
 import React from "react"
 /* Styles & Sources */
 import "./styles.css"
+import IconClose from "@icons/icon_close.png"
 
-function ItemShopping() {
+const styleIcon = {
+  backgroundImage: `url(${IconClose})`
+}
+
+function ItemShopping({ itemShopping }) {
   return (
     <div className="shopping-card">
       <figure className="shopping-picture">
         <img
           className="picture-img"
-          src="https://images.pexels.com/photos/6782479/pexels-photo-6782479.jpeg?cs=srgb&dl=pexels-max-vakhtbovych-6782479.jpg&fm=jpg"
-          alt="Item Shopping Order"
+          src={itemShopping.images[0]}
+          alt={itemShopping.title}
         />
       </figure>
       <div className="shopping-detail">
-        <p>Round shelf</p>
-        <p>$ 120,00</p>
-        <span className="delet-product icon"></span>
+        <p>{itemShopping.title}</p>
+        <p>$ {itemShopping.price}</p>
+        <span
+          className="delet-product icon"
+          style={styleIcon}
+        ></span>
       </div>
     </div>
   )
