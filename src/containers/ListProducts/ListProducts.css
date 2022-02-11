@@ -1,9 +1,0 @@
-/* Cards */
-.cards-products-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, var(--card-size-md));
-  place-content: space-evenly;
-  gap: 1.375em;
-  width: 90%;
-  margin: 0 auto;
-}
