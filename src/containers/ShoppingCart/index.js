@@ -46,6 +46,7 @@ function ShoppingCart() {
             state.cart.map((itemShopping, index) => (
               <ItemShopping
                 key={`item-${itemShopping.id}-shopping-0${index}`}
+                index={index}
                 itemShopping={itemShopping}
               />
             ))
