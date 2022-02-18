@@ -1,4 +1,3 @@
-import React from "react"
 import "./styles.css"
 
 function MyAccount() {
@@ -10,19 +9,29 @@ function MyAccount() {
         <form className="form" action="/">
           <div className="form-data">
             {/* <!-- Name --> */}
-            <label className="form-label" for="Name">Name</label>
+            <label className="form-label" for="Name">
+              Name
+            </label>
             <p className="form-read-only">Camila Yokoo</p>
 
             {/* <!-- Email address --> */}
-            <label className="form-label" for="email-address">Email address</label>
+            <label className="form-label" for="email-address">
+              Email address
+            </label>
             <p className="form-read-only">camilayokoo@gmail.com</p>
 
             {/* <!-- Password --> */}
-            <label className="form-label" for="password">Password</label>
+            <label className="form-label" for="password">
+              Password
+            </label>
             <p className="form-read-only">***********</p>
           </div>
           {/* <!-- Confirm --> */}
-          <input className="form-btn account-btn secondary-btn" type="submit" value="Edit" />
+          <input
+            className="form-btn account-btn secondary-btn"
+            type="submit"
+            value="Edit"
+          />
         </form>
       </div>
     </div>

@@ -1,5 +1,4 @@
-import React from "react"
-import ResumeProduct from "@components/ResumeProduct"
+import ResumeProduct from "components/ResumeProduct"
 import "./styles.css"
 
 function DetailProduct() {

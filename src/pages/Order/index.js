@@ -1,5 +1,4 @@
-import React from "react"
-import ListOrder from "@containers/ListOrder/"
+import ListOrder from "containers/ListOrder/"
 import "./styles.css"
 
 function Order() {

@@ -1,12 +1,8 @@
-import React from "react"
 import "./styles.css"
 
-function BtnSecond({ text = 'Button Title', handlerEvent }) {
+function BtnSecond({ text = "Button Title", handlerEvent }) {
   return (
-    <button
-      className="BtnSecond BtnFont"
-      onClick={handlerEvent}
-    >
+    <button className="BtnSecond BtnFont" onClick={handlerEvent}>
       {text}
     </button>
   )

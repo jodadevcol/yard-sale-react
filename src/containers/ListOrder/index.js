@@ -1,5 +1,4 @@
-import React from "react"
-import ResumeOrder from "@components/ResumeOrder"
+import ResumeOrder from "components/ResumeOrder"
 import "./styles.css"
 
 function ListOrder() {

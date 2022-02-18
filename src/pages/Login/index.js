@@ -1,6 +1,6 @@
 import React, { useRef } from "react"
-import BtnPrimary from "@components/Buttons/Primary"
-import BtnSecond from "@components/Buttons/Secondary"
+import BtnPrimary from "components/Buttons/Primary"
+import BtnSecond from "components/Buttons/Secondary"
 import "./styles.css"
 /* import Logo from '@img/logo-yard-sale.svg' */
 
@@ -10,12 +10,12 @@ function Login() {
     event.preventDefault()
     const formData = new FormData(form.current)
     const data = {
-      userName: formData.get('emailAddress'),
-      password: formData.get('password')
+      userName: formData.get("emailAddress"),
+      password: formData.get("password"),
     }
 
     console.log({
-      data
+      data,
     })
   }
 
@@ -30,7 +30,9 @@ function Login() {
 
         <form className="form" action="/" ref={form}>
           {/* <!-- Email address --> */}
-          <label className="form-label" hrmlfor="emailAddress">Email Address</label>
+          <label className="form-label" hrmlfor="emailAddress">
+            Email Address
+          </label>
           <input
             className="form-input input-email"
             type="email"
@@ -38,7 +40,9 @@ function Login() {
             placeholder="email@example.com"
           />
           {/* <!-- Password --> */}
-          <label className="form-label" hrmlfor="password">Password</label>
+          <label className="form-label" hrmlfor="password">
+            Password
+          </label>
           <input
             className="form-input input-password"
             type="password"
@@ -46,18 +50,15 @@ function Login() {
             placeholder="*****"
           />
           {/* <!-- Confirm --> */}
-          <BtnPrimary
-            text="Log in"
-            handlerEvent={handleSubmit}
-          />
+          <BtnPrimary text="Log in" handlerEvent={handleSubmit} />
 
-          <a className="forgot-password" href="/">Forgot my password</a>
+          <a className="forgot-password" href="/">
+            Forgot my password
+          </a>
         </form>
 
         {/* <!-- Sig up --> */}
-        <BtnSecond
-          text="Sign up"
-        />
+        <BtnSecond text="Sign up" />
       </div>
     </div>
   )

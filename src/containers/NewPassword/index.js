@@ -1,6 +1,5 @@
-import React from "react"
-import "./styles.css";
-/* import logo from "@img/logo-yard-sale.svg" */
+import "./styles.css"
+/* import logo from "img/logo-yard-sale.svg" */
 
 function NewPassword() {
   return (
@@ -49,7 +48,7 @@ function NewPassword() {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default NewPassword;
+export default NewPassword

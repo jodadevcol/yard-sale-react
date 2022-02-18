@@ -1,18 +1,13 @@
-import React from "react"
 import "./styles.css"
-import logo from "@img/logo-yard-sale.svg"
-import email from "@icons/email.svg"
+import logo from "img/logo-yard-sale.svg"
+import email from "icons/email.svg"
 
 function RecoveryPass() {
   return (
     <>
       <div className="login">
         <div className="login-form-container">
-          <img
-            className="login-logo"
-            src={logo}
-            alt="YARD Sale Logo"
-          />
+          <img className="login-logo" src={logo} alt="YARD Sale Logo" />
 
           <h1 className="login-title">Email has been sent!</h1>
           <p className="login-subtitle">

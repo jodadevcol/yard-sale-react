@@ -1,10 +1,12 @@
-import React from "react"
 import "./styles.css"
+import { IconClose } from "icons/IconClose"
 
 function ResumeProduct() {
   return (
     <aside className="detail-product">
-      <span className="icon-close icon"></span>
+      <span className="icon-close icon">
+        <IconClose />
+      </span>
       <figure className="detail-product-picture">
         <img
           className="picture-img"
@@ -22,10 +24,10 @@ function ResumeProduct() {
           <p className="product-resume--price">$ 120,00</p>
           <p className="product-resume--name">Retro refrigerator</p>
           <p className="product-resume--description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-            quam nobis velit, maxime perspiciatis eos dolorem nihil alias
-            quod cupiditate iure optio ut provident commodi sapiente.
-            Debitis sequi nam dolores.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quam
+            nobis velit, maxime perspiciatis eos dolorem nihil alias quod
+            cupiditate iure optio ut provident commodi sapiente. Debitis sequi
+            nam dolores.
           </p>
         </div>
         <button className="product-add-cart-btn primary-btn">
