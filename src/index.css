@@ -17,7 +17,7 @@
   --card-size-md: 220px;
   --card-size-lg: 260px;
   /* Header */
-  --height-header: 10vh;
+  --height-header: 4rem;
 }
 *,
 ::after,
@@ -97,7 +97,7 @@ body {
   width: 34px;
   height: 34px;
   background-color: var(--white);
-  background-image: url("./assets/icons/icon_close.png");
+  /* background-image: url("./assets/icons/icon_close.png"); */
   background-size: 14px 14px;
   border-radius: 50%;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
