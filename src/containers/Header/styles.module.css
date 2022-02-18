@@ -1,80 +1,99 @@
-.hero {
+.isHero {
   position: relative;
   z-index: 1040;
 }
-.navbar-container {
+.isHeroNavbar {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: var(--height-header);
-  margin-bottom: 2em;
   padding: 1em 1.5em;
   box-shadow: 0px 0px 6px 1px rgb(0 0 0 / 10%);
 }
-.nav-mobile {
+.isNavbarMobile {
   display: none;
 }
-.logo {
-  width: 145px;
+.isNavbarLogo {
+  width: auto;
+  height: 26px;
   margin-right: 2em;
 }
-.navbar-items {
+.isLogoNav {
+  width: 100%;
+  height: 100%;
+}
+.isNavbarItems {
   display: flex;
   align-items: center;
   width: 100%;
 }
-.navbar-list {
+.isItemsNavList {
   display: flex;
   align-items: center;
   list-style: none;
 }
-.navbar-list .navbar-item {
+.isItemsNavList .isNavListItem {
   margin: 0 4px;
   padding: 5px 12px;
   font-weight: 500;
   font-size: var(--font-size-md);
   line-height: 20px;
 }
-.navbar-list.account-shopping .navbar-item {
+.isItemsNavList.isNavAccount .isNavListItem {
   padding: 0;
 }
-.navbar-list:not(.account-shopping) .navbar-item a {
+.isItemsNavList:not(.isNavAccount) .isNavListItem a {
   text-decoration: none;
   color: var(--very-light-pink);
 }
-.navbar-list:not(.account-shopping) .navbar-item:hover,
-.navbar-list:not(.account-shopping) .navbar-item.active {
+.isItemsNavList:not(.isNavAccount) .isNavListItem:hover,
+.isItemsNavList:not(.isNavAccount) .isNavListItem.active {
   font-weight: 700;
   border: 1px solid #acd9b2;
   border-radius: 10px;
 }
-.navbar-list:not(.account-shopping) .navbar-item:hover a,
-.navbar-list:not(.account-shopping) .navbar-item.active a {
+.isItemsNavList:not(.isNavAccount) .isNavListItem:hover a,
+.isItemsNavList:not(.isNavAccount) .isNavListItem.active a {
   color: #acd9b2;
 }
-.account-shopping {
+.isNavAccount {
   position: relative;
   margin: 0 0 0 auto;
 }
-.account-shopping .account-info {
+.isNavAccount .isAccountInfo {
+  display: flex;
+  align-items: center;
+  margin-right: 0.6rem;
   font-weight: 300;
   font-size: var(--font-size-sm);
 }
-.account-shopping .account-info a {
+.isNavAccount .isAccountInfo a {
   line-height: 17px;
   text-decoration: none;
   color: var(--black);
 }
-.account-info span,
-.account-info span.arrow-down {
-  background-image: url("../../assets/icons/flechita.svg");
+.isAccountInfoIcon {
+  align-self: end;
+  width: 14px;
+  height: 14px;
+  margin-left: 0.2rem;
   transform: rotate(90deg);
 }
-.account-shopping .shopping-cart-nav {
+.isIconSvg {
+  width: 100%;
+  height: 100%;
+}
+.isNavShoppingCart {
+  width: 1.6rem;
+  height: 1.6rem;
   margin-left: 1em;
 }
-.account-shopping .shopping-cart-nav .count-items {
+.isShoppingCartSvg {
+  width: 100%;
+  height: 100%;
+}
+.isCountItems {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,25 +108,27 @@
   border-radius: 50%;
 }
 @media (max-width: 990px) {
-  .navbar-container .nav-mobile {
+  .isNavbarMobile {
     display: block;
   }
-  .navbar-container {
-    justify-content: space-between;
-  }
-  .navbar-container .navbar-items {
-    width: auto;
-  }
-  .navbar-container .logo {
+  .isNavbarLogo {
     margin: 0;
   }
-  .navbar-list:not(.account-shopping) {
+
+  .isHeroNavbar {
+    justify-content: space-between;
+  }
+  .isHeroNavbar .isNavbarItems {
+    width: auto;
+  }
+
+  .isItemsNavList:not(.isNavAccount) {
     display: none;
   }
-  .navbar-list .navbar-item:not(.shopping-cart-nav) {
+  .isItemsNavList .isNavListItem:not(.isNavShoppingCart) {
     display: none;
   }
-  .navbar-list .navbar-item.shopping-cart-nav {
+  .isItemsNavList .isNavListItem.isNavShoppingCart {
     margin: 0;
   }
 }

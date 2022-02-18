@@ -1,15 +1,14 @@
 /* Cards */
-.cards-products-container {
+.isCardsProductsContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, var(--card-size-md));
   place-content: space-evenly;
   gap: 1.375em;
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
 }
 /* Medias sm - Cards products */
 @media (max-width: 640px) {
-  .cards-products-container {
+  .isCardsProductsContainer {
     grid-template-columns: repeat(auto-fill, var(--card-size-sm));
     gap: 0.625em;
   }
