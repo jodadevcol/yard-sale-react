@@ -2,8 +2,9 @@ import { useState } from "react"
 
 const initialState = { cart: [] }
 
-function useInitialState() {
+function useCartState() {
   const [state, setState] = useState(initialState)
+  const [isOpenCart, setIsOpenCart] = useState(false)
 
   const addToCart = (payload) => {
     setState({
@@ -23,11 +24,18 @@ function useInitialState() {
     })
   }
 
+
+  const isShoppingCart = () => {
+    setIsOpenCart(!isOpenCart)
+  }
+
   return {
     state,
+    isOpenCart,
+    isShoppingCart,
     addToCart,
     removeToCart,
   }
 }
 
-export default useInitialState
+export default useCartState
