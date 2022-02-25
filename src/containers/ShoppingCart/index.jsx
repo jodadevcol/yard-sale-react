@@ -12,7 +12,7 @@ import { IconArrowLeft } from "icons/IconArrowLeft"
 import { IconShoppingEmpty } from "../../components/Icons/IconShoppingEmpty"
 
 function ShoppingCart () {
-  const { state } = useContext(AppContext)
+  const { state, isShoppingCart } = useContext(AppContext)
 
   const totalArticles = () => {
     const total = state.cart.length
@@ -29,50 +29,52 @@ function ShoppingCart () {
   const formatMoney = useFormatMoney(totalShopping())
 
   return (
-    <div className={styles.isShoppingCartContainer}>
-      <aside className={styles.isShoppingCartAside}>
-        <div className={styles.isAsideTitle}>
-          <div className={styles.isTitleIcon}>
-            <IconArrowLeft fill="#C7C7C7" />
+    <nav className={styles.isShoppingCartContainer}>
+      <div className={styles.isShoppingCart}>
+        <aside className={styles.isShoppingCartAside}>
+          <div className={styles.isAsideTitle}>
+            <div className={styles.isTitleIcon} onClick={isShoppingCart}>
+              <IconArrowLeft fill="#C7C7C7" />
+            </div>
+            <h2 className={styles.isAsideText}>Shopping cart</h2>
           </div>
-          <h2 className={styles.isAsideText}>Shopping cart</h2>
-        </div>
-        <div className={styles.isAsideContent}>
-          {
-            state.cart.length === 0
-              ? (
-                <div className={styles.isContentEmpty}>
-                  <div className={styles.isEmptyIcon}>
-                    <IconShoppingEmpty classname={styles.isIconSvg} fill="#ffffff" />
+          <div className={styles.isAsideContent}>
+            {
+              state.cart.length === 0
+                ? (
+                  <div className={styles.isContentEmpty}>
+                    <div className={styles.isEmptyIcon}>
+                      <IconShoppingEmpty classname={styles.isIconSvg} fill="#ffffff" />
+                    </div>
+                    <span className={styles.isEmptyText}>Cart is empty.</span>
                   </div>
-                  <span className={styles.isEmptyText}>Cart is empty.</span>
-                </div>
-              )
-              : (
-                state.cart.map((itemShopping, index) => {
-                  return (
-                    <ItemShopping
-                      key={`shopping-${itemShopping.id}-0${index}`}
-                      index={index}
-                      itemShopping={itemShopping}
-                    />
-                  )
-                })
-              )
-          }
-        </div>
+                )
+                : (
+                  state.cart.map((itemShopping, index) => {
+                    return (
+                      <ItemShopping
+                        key={`shopping-${itemShopping.id}-0${index}`}
+                        index={index}
+                        itemShopping={itemShopping}
+                      />
+                    )
+                  })
+                )
+            }
+          </div>
 
-        <div className={styles.isAsideResume}>
-          <p className={styles.isResumeInfo}>
-            <span>Total</span>
-            <span>{totalArticles()}</span>
-          </p>
-          <p className={styles.isResumePrice}>{formatMoney}</p>
-        </div>
+          <div className={styles.isAsideResume}>
+            <p className={styles.isResumeInfo}>
+              <span>Total</span>
+              <span>{totalArticles()}</span>
+            </p>
+            <p className={styles.isResumePrice}>{formatMoney}</p>
+          </div>
 
-        <BtnPrimary text="Checkout" />
-      </aside>
-    </div>
+          <BtnPrimary text="Checkout" />
+        </aside>
+      </div>
+    </nav>
   )
 }
 
