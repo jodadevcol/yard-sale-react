@@ -10,17 +10,17 @@ export const MainRoutes = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Main />}>
-          <Route index element={<Home />} />
-          {/* <Route path="login" element={<Login />} />
-          <Route path="newpassword" element={<NewPassword />} />
-          <Route path="recovery-password" element={<RecoveryPass />} />
-          <Route path="account" element={<MyAccount />} />
-          <Route path="account-created" element={<MyAccountCreated />} />
-          <Route path="my-orders" element={<MyOrders />} />
-          <Route path="order" element={<Order />} />
-          <Route path="orders" element={<Orders />} />
-          <Route path="send-email" element={<SendEmail />} /> */}
-          <Route path="*" element={<NotFound />} />
+            <Route index element={<Home />} />
+            {/* <Route path="login" element={<Login />} />
+            <Route path="newpassword" element={<NewPassword />} />
+            <Route path="recovery-password" element={<RecoveryPass />} />
+            <Route path="account" element={<MyAccount />} />
+            <Route path="account-created" element={<MyAccountCreated />} />
+            <Route path="my-orders" element={<MyOrders />} />
+            <Route path="order" element={<Order />} />
+            <Route path="orders" element={<Orders />} />
+            <Route path="send-email" element={<SendEmail />} /> */}
+            <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
