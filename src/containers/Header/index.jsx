@@ -2,7 +2,6 @@ import React, { useState, useContext } from "react"
 /* Components */
 import MenuProfile from "components/MenuProfile"
 /* Containers */
-import ShoppingCart from "containers/ShoppingCart"
 /* Contexts */
 import AppContext from "contexts/AppContext"
 /* Styles & Sources */
@@ -14,19 +13,12 @@ import { Logo } from "icons/Logo"
 
 function Header() {
   const [toggle, setToggle] = useState(false)
-  const [toggleOrders, setToggleOrders] = useState(false)
 
-  const handlerToggle = (Option) => {
-    if (Option === "OptionOne") {
-      setToggle(!toggle)
-    }
-
-    if (Option === "OptionTwo") {
-      setToggleOrders(!toggleOrders)
-    }
+  const handlerToggle = () => {
+    setToggle(!toggle)
   }
 
-  const { state } = useContext(AppContext)
+  const { state, isShoppingCart } = useContext(AppContext)
 
   return (
     <header className={styles.isHero}>
@@ -71,7 +63,7 @@ function Header() {
             </li>
             <li
               className={`${styles.isNavListItem} ${styles.isNavShoppingCart}`}
-              onClick={() => handlerToggle("OptionTwo")}
+              onClick={isShoppingCart}
             >
               <IconShoppingCart classname={styles.isShoppingCartSvg} />
 
@@ -81,7 +73,6 @@ function Header() {
             </li>
           </ul>
           {toggle ? <MenuProfile /> : null}
-          {toggleOrders ? <ShoppingCart /> : null}
         </div>
       </nav>
     </header>
