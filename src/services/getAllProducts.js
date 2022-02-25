@@ -1,4 +1,4 @@
-const URL_API = `https://api.escuelajs.co/api/v1/products`
+const URL_API = `https://api.escuelajs.co/api/v1/products?limit=25&offset=0`
 
 const dataStructure = (dataAPI) => {
   if (Array.isArray(dataAPI)) {
