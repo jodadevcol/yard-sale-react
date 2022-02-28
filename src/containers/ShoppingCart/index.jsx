@@ -11,7 +11,7 @@ import styles from "./styles.module.css"
 import { IconArrowLeft } from "icons/IconArrowLeft"
 import { IconShoppingEmpty } from "../../components/Icons/IconShoppingEmpty"
 
-function ShoppingCart () {
+function ShoppingCart ({isVisible, isClassCartShop}) {
   const { state, isShoppingCart } = useContext(AppContext)
 
   const totalArticles = () => {
@@ -29,8 +29,20 @@ function ShoppingCart () {
   const formatMoney = useFormatMoney(totalShopping())
 
   return (
-    <nav className={styles.isShoppingCartContainer}>
-      <div className={styles.isShoppingCart}>
+    <nav className={`
+        ${styles.isShoppingCartContainer}
+        ${
+          isVisible ? styles.isShoppingCartVisible : ''
+        }
+      `}
+    >
+      <div 
+        className={`
+          ${styles.isShoppingCartBox}
+          ${styles.isAnimCloseCart}
+          ${isClassCartShop}
+        `}
+      >
         <aside className={styles.isShoppingCartAside}>
           <div className={styles.isAsideTitle}>
             <div className={styles.isTitleIcon} onClick={isShoppingCart}>

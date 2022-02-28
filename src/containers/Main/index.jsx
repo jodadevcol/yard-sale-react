@@ -19,8 +19,14 @@ function Main() {
       <Section>
         <Outlet />
       </Section>
-      {/* Nav of de Shopping */}
-      {isOpenCart ? <ShoppingCart /> : null}
+      <ShoppingCart 
+        isVisible={
+          isOpenCart ? true : false
+        }
+        isClassCartShop={
+          isOpenCart ? styles.isAnimOpenCart : ''
+        }
+      />
     </main>
   )
 }

@@ -5,3 +5,35 @@
   height: 100%;
   overflow: hidden;
 }
+/* Animation of Shop Cart */
+.isAnimOpenCart {
+  animation: slide-in-left-alt .4s cubic-bezier(.25,.46,.45,.94) .15s both;
+}
+.isAnimCloseCart {
+  animation: slide-out-right-alt .5s cubic-bezier(.55,.055,.675,.19) both;
+}
+/* KeyFrames */
+@keyframes slide-in-left-alt{
+  0% {
+    -webkit-transform: translateX(120%);
+    transform: translateX(120%);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-out-right-alt{
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(120%);
+    transform: translateX(120%);
+    opacity: 1;
+  }
+}

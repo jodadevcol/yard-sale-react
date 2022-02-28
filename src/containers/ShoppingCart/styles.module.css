@@ -4,13 +4,18 @@
   bottom: 0;
   right: 0;
   left: 0;
+  width: 0vw;
+  height: 0vh;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+}
+.isShoppingCartVisible {
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.2);
-  overflow: hidden;
   z-index: 1080;
 }
-.isShoppingCart {
+.isShoppingCartBox {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -21,8 +26,6 @@
   min-height: 100vh;
   background-color: var(--white);
   transform: translateX(120%);
-  animation: slide-in-left-alt .4s cubic-bezier(.25,.46,.45,.94) .15s both;
-  /* animation: slide-out-right-alt .5s cubic-bezier(.55,.055,.675,.19) both; */
 }
 .isShoppingCartAside {
   display: grid;
@@ -113,19 +116,11 @@
   color: var(--white);
   font-weight: 600;
 }
-/* KeyFrames */
-@keyframes slide-in-left-alt{
-  0% {
-    -webkit-transform: translateX(120%);
-    transform: translateX(120%);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1;
-  }
+
+.isAnimCloseCart {
+  animation: slide-out-right-alt .5s cubic-bezier(.55,.055,.675,.19) both;
 }
+/* KeyFrames */
 @keyframes slide-out-right-alt{
   0% {
     -webkit-transform: translateX(0);
