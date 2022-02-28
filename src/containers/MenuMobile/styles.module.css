@@ -1,0 +1,105 @@
+.isMenuMobileContainer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  max-width: 420px;
+  height: 100%;
+  background: #fff;
+  z-index: 2040;
+  overflow: hidden;
+  transform: translateX(-120%);
+  animation: slide-out-left-alt .5s cubic-bezier(.55,.055,.675,.19) both;
+}
+.isIconCloseMenu {
+  position: absolute;
+  top: 4%;
+  right: 4%;
+  width: 16px;
+  height: 16px;
+  transform: translate(-50%, -50%);
+  z-index: 2080;
+}
+.isMenuMobile {
+  position: relative;
+  display: grid;
+  align-content: stretch;
+  align-items: stretch;
+  width: 100%;
+  height: fit-content;
+  min-height: 100vh;
+  padding: 20px 35px;
+}
+.isMenuMobile hr {
+  width: 100%;
+  height: 1px;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  mix-blend-mode: normal;
+  opacity: 0.1;
+  border: 1px solid #979797;
+}
+.isMobileTopics {
+  list-style: none;
+}
+.isMobileTopics a,
+.isTopicItem a {
+  text-decoration: none;
+  color: var(--black);
+}
+.isTopicTitle {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: var(--font-size-md);
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.isTopicItem {
+  padding: 18px 0;
+}
+.isTopicItem a {
+  font-weight: 700;
+  font-size: var(--font-size-md);
+  line-height: 20px;
+}
+.isElementsAccount {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.isElementAccount {
+  margin-top: 52px;
+}
+.isAccountEmail {
+  padding: 0;
+  font-weight: 300;
+  font-size: var(--font-size-sm);
+  line-height: 17px;
+}
+.isAccountSignOut {
+  padding: 0;
+}
+.isAccountSignOut a {
+  font-size: var(--font-size-sm);
+  line-height: 17px;
+  color: var(--hospital-green);
+}
+
+/* KeyFrames */
+@keyframes slide-out-left-alt{
+  0% {
+    -webkit-transform: translateX(-120%);
+    transform: translateX(-120%);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

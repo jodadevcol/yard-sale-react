@@ -5,6 +5,7 @@ const initialState = { cart: [] }
 function useCartState() {
   const [state, setState] = useState(initialState)
   const [isOpenCart, setIsOpenCart] = useState(false)
+  const [isOpenMenuMobile, setIsOpenMenuMobile] = useState(false)
 
   const addToCart = (payload) => {
     setState({
@@ -29,10 +30,16 @@ function useCartState() {
     setIsOpenCart(!isOpenCart)
   }
 
+  const isMenuMobile = () => {
+    setIsOpenMenuMobile(!isOpenMenuMobile)
+  }
+
   return {
     state,
     isOpenCart,
     isShoppingCart,
+    isOpenMenuMobile,
+    isMenuMobile,
     addToCart,
     removeToCart,
   }

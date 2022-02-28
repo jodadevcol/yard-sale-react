@@ -10,24 +10,26 @@ import { IconMenuMobile } from "icons/IconMenuMobile"
 import { IconShoppingCart } from "icons/IconShoppingCart"
 import { IconArrow } from "icons/IconArrow"
 import { Logo } from "icons/Logo"
+import { Link } from "react-router-dom"
 
 function Header() {
+  const { state, isShoppingCart, isMenuMobile } = useContext(AppContext)
   const [toggle, setToggle] = useState(false)
 
   const handlerToggle = () => {
     setToggle(!toggle)
   }
 
-  const { state, isShoppingCart } = useContext(AppContext)
-
   return (
     <header className={styles.isHero}>
       <nav className={styles.isHeroNavbar}>
-        <div className={styles.isNavbarMobile}>
+        <div className={styles.isNavbarMobile} onClick={isMenuMobile}>
           <IconMenuMobile />
         </div>
         <div className={styles.isNavbarLogo}>
-          <Logo classname={styles.isLogoNav} />
+          <Link to="/">
+            <Logo classname={styles.isLogoNav} />
+          </Link>
         </div>
 
         <div className={styles.isNavbarItems}>
@@ -67,9 +69,11 @@ function Header() {
             >
               <IconShoppingCart classname={styles.isShoppingCartSvg} />
 
-              {state.cart.length > 0 ? (
-                <div className={styles.isCountItems}> {state.cart.length} </div>
-              ) : null}
+              {
+                state.cart.length > 0 
+                  ? (<div className={styles.isCountItems}> {state.cart.length} </div>) 
+                  : ''
+              }
             </li>
           </ul>
           {toggle ? <MenuProfile /> : null}

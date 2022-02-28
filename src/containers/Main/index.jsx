@@ -9,10 +9,11 @@ import ShoppingCart from "containers/ShoppingCart"
 import AppContext from "contexts/AppContext"
 /* Styles & Sources */
 import styles from "./styles.module.css"
+import MenuMobile from "../MenuMobile"
 
 
 function Main() {
-  const { isOpenCart } = useContext(AppContext)
+  const { isOpenCart, isOpenMenuMobile } = useContext(AppContext)
   return (
     <main className={styles.main}>
       <Header />
@@ -27,6 +28,11 @@ function Main() {
           isOpenCart ? styles.isAnimOpenCart : ''
         }
       />
+      {
+        isOpenMenuMobile
+          ? <MenuMobile/>
+          : ''
+      }
     </main>
   )
 }
