@@ -6,12 +6,22 @@ import { IconAddedInCart } from "icons/IconAddedInCart"
 /* const sourceImg = `https://images.pexels.com/photos/6782479/pexels-photo-6782479.jpeg?cs=srgb&dl=pexels-max-vakhtbovych-6782479.jpg&fm=jpg` */
 
 function ItemProduct({ id, title, price, image }) {
-  const [ iconAdded, setIconAdded ] = useState(false)
-  const { addToCart } = useContext(AppContext)
+  const { state, addToCart } = useContext(AppContext)
 
   const handleClick = ({ id, title, price, image }) => {
-    setIconAdded(!iconAdded)
     addToCart({ id, title, price, image })
+  }
+
+  // TODO: Mejorar validación de producto en el carro
+  const isProductInCart = () => { 
+    const isExist = state.cart.filter(product => product.id === id)
+
+    if (isExist.length > 0) {
+      return <IconAddedInCart classname={styles.isFigureIcon}/>
+    }
+    if (isExist.length === 0) {
+      return <IconAddToCart classname={styles.isFigureIcon} />
+    } 
   }
 
   return (
@@ -27,9 +37,7 @@ function ItemProduct({ id, title, price, image }) {
           onClick={() => handleClick({ id, title, price, image })}
         >
           {
-            iconAdded 
-              ? <IconAddedInCart classname={styles.isFigureIcon}/>
-              : <IconAddToCart classname={styles.isFigureIcon} />
+            isProductInCart()
           }
         </figure>
       </div>
