@@ -2,7 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 /* Pages */
 import Home from "pages/Home"
 import NotFound from "pages/NotFound"
-/* Componentes */
+import Login from "pages/Login"
+/* Container */
 import Main from "containers/Main"
 
 export const MainRoutes = () => {
@@ -11,7 +12,8 @@ export const MainRoutes = () => {
       <Routes>
         <Route path="/" element={<Main />}>
             <Route index element={<Home />} />
-            {/* <Route path="login" element={<Login />} />
+            <Route path="login" element={<Login />} />
+            {/* 
             <Route path="newpassword" element={<NewPassword />} />
             <Route path="recovery-password" element={<RecoveryPass />} />
             <Route path="account" element={<MyAccount />} />
