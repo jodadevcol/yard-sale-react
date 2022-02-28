@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 /* Contexts */
 import AppContext from "contexts/AppContext"
 /* Styles & Sources */
-import "./styles.css"
+import styles from "./styles.module.css"
 import { IconClose } from "icons/IconClose"
 
 function ItemShopping({ itemShopping, index }) {
@@ -13,24 +13,22 @@ function ItemShopping({ itemShopping, index }) {
   }
 
   return (
-    <div className="shopping-card">
-      <figure className="shopping-picture">
+    <div className={styles.isShopCartItem}>
+      <figure className={styles.isItemPicture}>
         <img
-          className="picture-img"
+          className={styles.isPictureImg}
           src={itemShopping.image}
           alt={itemShopping.title}
         />
       </figure>
-      <div className="shopping-detail">
+      <div className={styles.isItemDetail}>
         <p>{itemShopping.title}</p>
         <p>$ {itemShopping.price}</p>
-        {/* <span
-          className="delet-product icon"
-          style={styleIcon}
+        <span 
+          className={styles.isIconClose}
           onClick={() => hanldeRemove(itemShopping, index)}
-        ></span> */}
-        <span>
-          <IconClose />
+        >
+          <IconClose fill={'#c7c7c7'} />
         </span>
       </div>
     </div>
