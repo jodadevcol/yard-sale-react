@@ -11,3 +11,12 @@
 @media (max-width: 640px) {
   
 }
+
+.login-form-container {
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.form {
+  height: 74vh;
+}
