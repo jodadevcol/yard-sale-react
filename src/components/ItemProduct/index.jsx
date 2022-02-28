@@ -1,12 +1,16 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import AppContext from "contexts/AppContext"
 import styles from "./styles.module.css"
 import { IconAddToCart } from "icons/IconAddToCart"
+import { IconAddedInCart } from "icons/IconAddedInCart"
 /* const sourceImg = `https://images.pexels.com/photos/6782479/pexels-photo-6782479.jpeg?cs=srgb&dl=pexels-max-vakhtbovych-6782479.jpg&fm=jpg` */
 
 function ItemProduct({ id, title, price, image }) {
+  const [ iconAdded, setIconAdded ] = useState(false)
   const { addToCart } = useContext(AppContext)
+
   const handleClick = ({ id, title, price, image }) => {
+    setIconAdded(!iconAdded)
     addToCart({ id, title, price, image })
   }
 
@@ -22,12 +26,11 @@ function ItemProduct({ id, title, price, image }) {
           className={styles.isInfoFigure}
           onClick={() => handleClick({ id, title, price, image })}
         >
-          {/* <img
-            className="picture-icon"
-            src={IconAddCart}
-            alt="Add card product"
-          /> */}
-          <IconAddToCart classname={styles.isFigureIcon} />
+          {
+            iconAdded 
+              ? <IconAddedInCart classname={styles.isFigureIcon}/>
+              : <IconAddToCart classname={styles.isFigureIcon} />
+          }
         </figure>
       </div>
     </div>
